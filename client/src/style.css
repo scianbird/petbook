@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #00712a;
+  color: aliceblue;
+}
+
+/* keeping the hexcodes here for later styling:
+orange #f26522
+yellow #ffc80b
+green #00712a
+blue #005599
+navy #202221  */
+/* https://fonts.google.com/specimen/Fredoka?preview.text=you%20can%27t%20catch%20tiny%20toad&query=rounded */
+/* https://css-tricks.com/css-borders-using-masks/ */
