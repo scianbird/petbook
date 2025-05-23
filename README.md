@@ -10,15 +10,11 @@ I’ve made the conscious choice this time around to design from a mobile-first 
 
 Figma is still my go-to choice for first design steps / the wireframe stage. Reading ahead in our class notes I have seen the advice/expectation that wireframes should not include colour, so I have taken that into account here vs the “wireframe” I created in Figma for the cookie clicker game. I'm aiming again for three breakpoints -- one for phones, one for medium sized screens such as tablets and the final for wider screens. I created a wireframe for each breakpoint this time, and made sure to represent elements when both collapsed and expanded.
 
-![alt text][image]
-
 [image]: /breakpoint-wireframes.png "Wireframes for a desktop, tablet and app versions of an online guestbook"
 
 For design inspiration I’m looking at the miffy brand&website (https://miffyshop.co.uk). The brand is known for using flat/saturated colours and “friendly” styling, which lend a refreshing and down-to-earth feel that I think would be perfect for a little guestbook like this (partly helped in my case because of the nostalgia I have for the character, but I think that my understanding of what the brand are trying to do and how they are going about it means that even without nostalgia for that particular character, the emotional impact on the user will be the same).
 
 I am using this palette that is based on the brand colours from miffy: https://www.color-hex.com/color-palette/101109
-
-![alt text][image]
 
 [image]: /colour-wireframe.png "An exploration on what the final design of the online guestbook may look like, with a lot of flat, saturated colours and thick outlines."
 
@@ -36,8 +32,8 @@ I have written my own user stories for this (for future reference, these were wr
 
 I began with setting up a "skeleton" of the project and making sure that all the connections were working by using a database table I had previously created for a workshop. As I worked on this I continued to think about the logic I would have to employ in order to create the filtered display I'm planning. At the moment I have 2 main approaches in mind:
 
-- Have the form send some hidden property based on what image the user is looking at. This seems like a more elegant way of figuring it out, and by more elegant I think I mean more complex
+- Have the form send some hidden property based on what image the user is looking at. This seems like a more elegant way of figuring it out, and by more elegant I think I mean more complex (note to self, would this be done by calling the render function at different times?)
 
 - Have the user select which pet their comment is for in a dropdown list. This means that the form would always be static, and only the data that the user enters would have to differ
 
-As the setup time continues I will continue to think about this and do some research on how a form may send the hidden data I would be looking for -- this will include looking at query strings & the form on the TechEd website that auto-selects a value based on what link the user has clicked to view the form
+As the setup time continues I will continue to think about this and do some research on how a form may send the hidden data I would be looking for -- this will include looking at query strings & the form on the TechEd website that auto-selects a value based on what link the user has clicked to view the form. However, until then I will create a version of the site that displays all of the comments under each image, not just the comments intended for that pet (in order to ensure I have the minimum working site and to allow me time to style breakpoints) and then I will attempt to build onto that.

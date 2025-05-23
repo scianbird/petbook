@@ -2,7 +2,16 @@
   margin: 0;
   padding: 0;
   background-color: #00712a;
-  color: aliceblue;
+  color: white;
+  font-family: "Fredoka";
+}
+
+.fredokaFONT {
+  font-family: "Fredoka", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 529;
+  font-style: normal;
+  font-variation-settings: "width" 86.7;
 }
 
 /* keeping the hexcodes here for later styling:
@@ -11,5 +20,44 @@ yellow #ffc80b
 green #00712a
 blue #005599
 navy #202221  */
-/* https://fonts.google.com/specimen/Fredoka?preview.text=you%20can%27t%20catch%20tiny%20toad&query=rounded */
 /* https://css-tricks.com/css-borders-using-masks/ */
+
+.petbook_header {
+  background-color: #005599;
+  border: solid #202221 6px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.navbarImageClass {
+  width: 6rem;
+  height: 6rem;
+  border: solid #202221 4px;
+}
+
+.navbarImageClass:hover {
+  width: 6rem;
+  height: 6rem;
+  cursor: pointer;
+}
+
+.mainFrameclass {
+  width: 6rem;
+  height: 6rem;
+}
+
+.text_box {
+  background-color: bisque;
+  color: dodgerblue;
+}
+
+.form_styling {
+  background-color: white;
+  padding: 4rem;
+}
+
+.petbook_footer {
+  text-align: right;
+}
