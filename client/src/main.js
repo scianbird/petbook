@@ -31,20 +31,23 @@ async function newUserComment() {
 function createCommentElements(arrayofdata) {
   arrayofdata.forEach((item) => {
     //create new elements
+    const CommentBox = document.createElement("div");
+    CommentBox.setAttribute("class", "displayComments");
     const userName = document.createElement("h2");
     const favouritePet = document.createElement("p");
     const userComment = document.createElement("p");
 
     //update content values
     userName.textContent = item.user_name;
-    favouritePet.textContent = item.favourite_pet;
+    favouritePet.textContent = "Voted for " + item.favourite_pet;
     userComment.textContent = item.user_comment;
 
     //append to the DOM
     const theCommentWall = document.getElementById("text_box");
-    theCommentWall.appendChild(userName);
-    theCommentWall.appendChild(favouritePet);
-    theCommentWall.appendChild(userComment);
+    theCommentWall.appendChild(CommentBox);
+    CommentBox.appendChild(userName);
+    CommentBox.appendChild(favouritePet);
+    CommentBox.appendChild(userComment);
   });
 }
 
@@ -58,20 +61,27 @@ async function renderData() {
 
 const thumbnailImages = [
   {
-    image: "src/media/toad_icon.png",
+    thumbnail: "src/media/toad_icon.png",
+    image: "src/media/toad_framed.png",
+    // commentKeyword: "toad", this was in here so that i could maybe filter in the render function, something like commentKeyword === Favourite pet" and then it would only display those = toad but .. 🤔 I still have a way to go
     alt: "A cartoon creature.",
     class: "navbarImageClass",
     mainFrameclass: "mainFrameclass",
+    petname: "Toad",
   },
   {
-    image: "src/media/william_icon.png",
+    thumbnail: "src/media/william_icon.png",
+    image: "src/media/william_framed.png",
     class: "navbarImageClass",
     mainFrameclass: "mainFrameclass",
+    petname: "William",
   },
   {
-    image: "src/media/sandwich_icon.png",
+    thumbnail: "src/media/sandwich_icon.png",
+    image: "src/media/sandwich_framed.png",
     class: "navbarImageClass",
     mainFrameclass: "mainFrameclass",
+    petname: "Jam Sandwich",
   },
 ];
 
@@ -83,7 +93,7 @@ const imageFrame = document.getElementById("chosenImageBox");
 
 thumbnailImages.forEach(function navbarDisplay(thumbnailImages) {
   let navbarimgCreate = document.createElement("img");
-  navbarimgCreate.setAttribute("src", thumbnailImages.image);
+  navbarimgCreate.setAttribute("src", thumbnailImages.thumbnail);
   navbarimgCreate.setAttribute("class", thumbnailImages.class);
   navbarBox.appendChild(navbarimgCreate);
 
@@ -94,8 +104,8 @@ thumbnailImages.forEach(function navbarDisplay(thumbnailImages) {
     displayPageimgCreate.setAttribute("src", thumbnailImages.image);
     displayPageimgCreate.setAttribute("class", thumbnailImages.mainFrameclass);
     imageFrame.appendChild(displayPageimgCreate);
+
     renderData();
-    console.log("you chose this image");
   }
   navbarimgCreate.addEventListener("click", displayPageIMG);
 });

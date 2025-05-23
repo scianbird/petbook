@@ -37,3 +37,13 @@ I began with setting up a "skeleton" of the project and making sure that all the
 - Have the user select which pet their comment is for in a dropdown list. This means that the form would always be static, and only the data that the user enters would have to differ
 
 As the setup time continues I will continue to think about this and do some research on how a form may send the hidden data I would be looking for -- this will include looking at query strings & the form on the TechEd website that auto-selects a value based on what link the user has clicked to view the form. However, until then I will create a version of the site that displays all of the comments under each image, not just the comments intended for that pet (in order to ensure I have the minimum working site and to allow me time to style breakpoints) and then I will attempt to build onto that.
+
+Building the actual functionality of having the form onscreen and then users information posting to the database and appending to the body of the page went quickly and without any issues at all ... (⊙_⊙) I have to say, during my self-reflection time this week I was re-visiting our Week 02 assignment (the dynamic image gallery) and that has allowed me to juxtapose my mindset right now with how out of my depth I felt back then.
+
+Now I'm out of my depth by CHOICE -> yes we're back to talking about filtering the comments again.
+
+Manny helpfully pointed me in the direction of filtering client-side, or dynamic routing server-side. This continues to be a stretch goal, but since the rest of the project has gone almost unbelievably easily I still have strength to try something a little crazy.
+
+## The Styling Process
+
+Having such a strong visual direction from my planning stage really helped the styling process be efficient. Taking my feedback from last week into account, I am attempting to totally style using flex/grid and not allowing myself to rely on margins, which is requiring a little troubleshooting (scope reaches me even here...) but I have faith.

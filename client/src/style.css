@@ -1,8 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  background-color: #00712a;
-  color: white;
   font-family: "Fredoka";
 }
 
@@ -20,7 +18,11 @@ yellow #ffc80b
 green #00712a
 blue #005599
 navy #202221  */
-/* https://css-tricks.com/css-borders-using-masks/ */
+/* https://css-tricks.com/css-borders-using-masks/ I ended up just creating the image for the main page-image with the "frame" already around it, which did the job, rather than try and design a CSS frame (although that is something I want to try)) */
+
+body {
+  background-color: #00712a;
+}
 
 .petbook_header {
   background-color: #005599;
@@ -43,21 +45,49 @@ navy #202221  */
   cursor: pointer;
 }
 
+.chosenImageBox {
+  display: flex;
+  justify-content: center;
+}
+
 .mainFrameclass {
-  width: 6rem;
-  height: 6rem;
+  width: 20rem;
+  height: 20rem;
+}
+
+.emptyFrame {
+  width: 20rem;
+  height: 20rem;
+}
+
+.displayComments {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 25rem;
+  border: solid #202221 4px;
+  padding: 5px;
+  text-align: left;
 }
 
 .text_box {
-  background-color: bisque;
-  color: dodgerblue;
+  margin: 20px;
+  display: flex;
+  flex-direction: column-reverse; /*this is so I can show the more recent comments at the top*/
+  align-items: center;
+  gap: 10px;
+  height: 200px;
+  overflow: scroll;
 }
 
 .form_styling {
   background-color: white;
   padding: 4rem;
+  display: flex;
+  justify-content: center;
 }
 
 .petbook_footer {
   text-align: right;
+  color: white;
 }
