@@ -16,16 +16,23 @@
   </head>
   <body>
     <header id="petbook_header" class="petbook_header"></header>
-    <section id="chosenImageBox" class="chosenImageBox"></section>
+    <section id="chosenImageBox" class="chosenImageBox">
+      <img src="src/media/empty_frame.png" class="emptyFrame" />
+    </section>
     <div id="text_box" class="text_box"></div>
     <div id="form_styling" class="form_styling">
       <form id="my_form" class="my_form">
         <fieldset class="my_form">
-          <label for="name">User Name: </label>
+          <label for="name">Name: </label>
           <input type="text" name="user_name" required />
 
           <label for="favourite">Favourite Pet? </label>
-          <input type="text" name="favourite_pet" required />
+          <select name="favourite_pet" required>
+            <option value="" selected hidden>Select a pet!</option>
+            <option value="Toad">Toad</option>
+            <option value="William">William</option>
+            <option value="Jam Sandwich">Jam Sandwich</option>
+          </select>
 
           <label for="comment">Comment: </label>
           <input type="text" name="user_comment" required />
