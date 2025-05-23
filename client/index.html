@@ -6,27 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="module" src="/src/main.js" defer></script>
     <link rel="stylesheet" href="./src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wdth,wght@86.7,529&display=swap"
+      rel="stylesheet"
+    />
     <title>PetBook</title>
   </head>
   <body>
-    <header id="petbook_header" class="petbook_header">petbook nav bar</header>
-    <div id="app">hello</div>
-    <form id="my_form">
-      <fieldset>
-        <legend>Add A Guy</legend>
-        <label for="name">Guy Name: </label>
-        <input type="text" name="name" required />
-
-        <label for="codename">Codename: </label>
-        <input type="text" name="codename" required />
-
-        <label for="number">Give him a number: </label>
-        <input type="number" name="number" required />
-
-        <button type="submit">Submit data</button>
-      </fieldset>
-    </form>
+    <header id="petbook_header" class="petbook_header"></header>
+    <section id="chosenImageBox" class="chosenImageBox"></section>
     <div id="text_box" class="text_box"></div>
+    <div id="form_styling" class="form_styling">
+      <form id="my_form" class="my_form">
+        <fieldset class="my_form">
+          <label for="name">User Name: </label>
+          <input type="text" name="user_name" required />
+
+          <label for="favourite">Favourite Pet? </label>
+          <input type="text" name="favourite_pet" required />
+
+          <label for="comment">Comment: </label>
+          <input type="text" name="user_comment" required />
+
+          <button type="submit">Submit data</button>
+        </fieldset>
+      </form>
+    </div>
+
     <footer id="petbook_footer" class="petbook_footer">
       © eeltoast (that’s the brand name I’m thinking of for design)
     </footer>
