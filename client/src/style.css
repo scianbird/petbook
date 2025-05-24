@@ -24,40 +24,48 @@ body {
   background-color: #00712a;
 }
 
-.petbook_header {
-  background-color: #005599;
-  border: solid #202221 6px;
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  padding: 1rem;
+/*although the icons at the top of the screen mean that you would have to reach up in order to tap them on your phone, leaving them at the side also means that your thumb covers it when in the resting position. I think on review that I would re-design these and actually open my mockups on my phone (I am a phone hater...) in order to review and make notes on the placeholder design, but thanks to not having enough time, this will have to do for now (｡•́︿•̀｡) */
+
+@media only screen and (max-width: 768px) {
+  .petbook_header {
+    background-color: #005599;
+    border: solid #202221 6px;
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    padding: 1rem;
+  }
 }
 
 .navbarImageClass {
-  width: 6rem;
-  height: 6rem;
+  width: 5rem;
+  height: 5rem;
   border: solid #202221 4px;
 }
 
 .navbarImageClass:hover {
-  width: 6rem;
-  height: 6rem;
+  width: 5em;
+  height: 5rem;
   cursor: pointer;
 }
 
 .chosenImageBox {
   display: flex;
-  justify-content: center;
+  flex-direction: column-reverse;
+  gap: 10px;
+  margin-top: 5px;
+  align-items: center;
+  color: white;
 }
 
 .mainFrameclass {
-  width: 20rem;
-  height: 20rem;
+  width: 15rem;
+  height: 15rem;
 }
 
 .emptyFrame {
-  width: 20rem;
-  height: 20rem;
+  width: 15rem;
+  height: 15rem;
 }
 
 .displayComments {
@@ -73,21 +81,221 @@ body {
 .text_box {
   margin: 20px;
   display: flex;
-  flex-direction: column-reverse; /*this is so I can show the more recent comments at the top*/
+  flex-direction: column; /*I thought about column-reverse  so I can show the more recent comments at the top, but since the scroll seems to auto-default to showing the bottom first, then it makes a little more sense to have the newest at the bottom*/
   align-items: center;
   gap: 10px;
-  height: 200px;
+  max-height: 200px;
   overflow: scroll;
+}
+
+.my_form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  gap: 5px;
 }
 
 .form_styling {
   background-color: white;
-  padding: 4rem;
+  padding: 1rem;
   display: flex;
   justify-content: center;
+  font-size: larger;
+  align-items: center;
 }
 
 .petbook_footer {
   text-align: right;
   color: white;
+}
+
+.submit_button {
+  border: solid #202221 3px;
+  background-color: #ffc80b;
+  padding: 10px;
+  border-radius: 50%;
+  width: 100px;
+}
+
+.submit_button:hover {
+  cursor: pointer;
+}
+
+.inputBox {
+  border: solid #202221 3px;
+  font-size: larger;
+}
+
+.inputBoxComment {
+  border: solid #202221 3px;
+  font-size: larger;
+  height: 100px;
+} /*Visually showing that there's no limit to the length of the comment/encouraging longer comments by making the default size of this box bigger than the others*/
+
+.favouritePet {
+  border: solid #202221 3px;
+  font-size: large;
+}
+
+@media only screen and (min-width: 768px) {
+  .petbook_header {
+    background-color: #005599;
+    border: solid #202221 6px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 1rem;
+    position: fixed;
+    height: 100%;
+  }
+
+  .navbarImageClass {
+    width: 6rem;
+    height: 6rem;
+    border: solid #202221 4px;
+  }
+
+  .navbarImageClass:hover {
+    width: 6rem;
+    height: 6rem;
+    cursor: pointer;
+  }
+
+  .chosenImageBox {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+    margin-top: 5px;
+    align-items: center;
+    color: white;
+  }
+
+  .mainFrameclass {
+    width: 20rem;
+    height: 20rem;
+  }
+
+  .emptyFrame {
+    padding-top: 1rem;
+    width: 20rem;
+    height: 20rem;
+  }
+
+  .displayComments {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 25rem;
+    border: solid #202221 4px;
+    padding: 5px;
+    text-align: left;
+  }
+
+  .text_box {
+    margin: 20px;
+    display: flex;
+    flex-direction: column; /*I thought about column-reverse  so I can show the more recent comments at the top, but since the scroll seems to auto-default to showing the bottom first, then it makes a little more sense to have the newest at the bottom*/
+    align-items: center;
+    gap: 10px;
+    max-height: 200px;
+    overflow: scroll;
+  }
+
+  .my_form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    gap: 5px;
+    justify-content: right;
+  }
+
+  .form_styling {
+    background-color: white;
+    padding: 4rem;
+    display: flex;
+    font-size: larger;
+    justify-content: end;
+  }
+
+  .petbook_footer {
+    text-align: right;
+    color: white;
+  }
+
+  .submit_button {
+    border: solid #202221 3px;
+    background-color: #ffc80b;
+    padding: 10px;
+    border-radius: 50%;
+    width: 100px;
+  }
+
+  .submit_button:hover {
+    cursor: pointer;
+  }
+
+  .inputBox {
+    border: solid #202221 3px;
+    font-size: larger;
+  }
+
+  .inputBoxComment {
+    border: solid #202221 3px;
+    font-size: larger;
+    height: 100px;
+  } /*Visually showing that there's no limit to the length of the comment/encouraging longer comments by making the default size of this box bigger than the others*/
+
+  .favouritePet {
+    border: solid #202221 3px;
+    font-size: large;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .petbook_header {
+    background-color: #005599;
+    border: solid #202221 6px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 1rem;
+
+    height: 100%;
+  }
+
+  .navbarImageClass {
+    width: 8rem;
+    height: 8rem;
+    border: solid #202221 4px;
+  }
+
+  .navbarImageClass:hover {
+    width: 8rem;
+    height: 8rem;
+    cursor: pointer;
+  }
+
+  .displayComments {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 40rem;
+    border: solid #202221 4px;
+    padding: 5px;
+    text-align: left;
+  }
+
+  .text_box {
+    margin: 20px;
+    display: flex;
+    flex-direction: column; /*I thought about column-reverse  so I can show the more recent comments at the top, but since the scroll seems to auto-default to showing the bottom first, then it makes a little more sense to have the newest at the bottom*/
+    align-items: center;
+    gap: 10px;
+    max-height: 200px;
+    overflow: scroll;
+  }
 }

@@ -17,3 +17,12 @@ VALUES ('Natasha', 'William', 'William you are so handsome!'),
 ('Claire', 'Toad', 'I know you arent supposed to choose favourites... but this form is asking me to!'), */
 
 --Success. No rows returned + the data is now correctly in my table
+
+
+/* reading this https://www.w3schools.com/sql/sql_ref_sqlserver.asp
+(+ my excel experience) allowed me to format this in order to show the "vote" results 
+SELECT favourite_pet, COUNT(favourite_pet)
+FROM petbook
+GROUP BY favourite_pet
+
+a table was returned counting the number of times each pet name showed up in the table - since the entry for that element has set options, this ensures that there will never be "bad" data eg toad instead of Toad 

@@ -23,24 +23,32 @@
     <div id="form_styling" class="form_styling">
       <form id="my_form" class="my_form">
         <fieldset class="my_form">
-          <label for="name">Name: </label>
-          <input type="text" name="user_name" required />
+          <label for="name">Name </label>
+          <input type="text" name="user_name" required class="inputBox" />
 
           <label for="favourite">Favourite Pet? </label>
-          <select name="favourite_pet" required>
+          <select name="favourite_pet" class="favouritePet" required>
             <option value="" selected hidden>Select a pet!</option>
             <option value="Toad">Toad</option>
             <option value="William">William</option>
             <option value="Jam Sandwich">Jam Sandwich</option>
           </select>
 
-          <label for="comment">Comment: </label>
-          <input type="text" name="user_comment" required />
+          <label for="comment">Leave a Comment for the pets! </label>
+          <input
+            type="text"
+            name="user_comment"
+            class="inputBoxComment"
+            required
+          />
 
-          <button type="submit">Submit data</button>
+          <button type="submit" class="submit_button">Submit!</button>
         </fieldset>
       </form>
     </div>
+    <!--    <div class="TESTING" id="TESTING">
+      hello. you should see the table below here
+    </div> -->
 
     <footer id="petbook_footer" class="petbook_footer">
       © eeltoast (that’s the brand name I’m thinking of for design)

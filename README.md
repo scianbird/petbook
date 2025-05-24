@@ -10,11 +10,15 @@ I’ve made the conscious choice this time around to design from a mobile-first 
 
 Figma is still my go-to choice for first design steps / the wireframe stage. Reading ahead in our class notes I have seen the advice/expectation that wireframes should not include colour, so I have taken that into account here vs the “wireframe” I created in Figma for the cookie clicker game. I'm aiming again for three breakpoints -- one for phones, one for medium sized screens such as tablets and the final for wider screens. I created a wireframe for each breakpoint this time, and made sure to represent elements when both collapsed and expanded.
 
+![image][alt text]
+
 [image]: /breakpoint-wireframes.png "Wireframes for a desktop, tablet and app versions of an online guestbook"
 
 For design inspiration I’m looking at the miffy brand&website (https://miffyshop.co.uk). The brand is known for using flat/saturated colours and “friendly” styling, which lend a refreshing and down-to-earth feel that I think would be perfect for a little guestbook like this (partly helped in my case because of the nostalgia I have for the character, but I think that my understanding of what the brand are trying to do and how they are going about it means that even without nostalgia for that particular character, the emotional impact on the user will be the same).
 
 I am using this palette that is based on the brand colours from miffy: https://www.color-hex.com/color-palette/101109
+
+![image][alt text]
 
 [image]: /colour-wireframe.png "An exploration on what the final design of the online guestbook may look like, with a lot of flat, saturated colours and thick outlines."
 
@@ -46,4 +50,24 @@ Manny helpfully pointed me in the direction of filtering client-side, or dynamic
 
 ## The Styling Process
 
-Having such a strong visual direction from my planning stage really helped the styling process be efficient. Taking my feedback from last week into account, I am attempting to totally style using flex/grid and not allowing myself to rely on margins, which is requiring a little troubleshooting (scope reaches me even here...) but I have faith.
+Having such a strong visual direction from my planning stage really helped the styling process be efficient. Taking my feedback from last week into account, I am attempting to totally style using flex/grid and not allowing myself to rely on margins, which is requiring a little troubleshooting with regards to the parent-child relationships (scope reaches me even here...) but I have faith.
+
+As I was styling the breakpoints, I realised the problems with my wireframe designs. Although I didn't have enough time to address these concerns, it allowed me to realise that I need to impliment a "testing the wireframe" step in my process, and underlines the importance of strong planning that takes into account every aspect of the creation process.
+
+I think that the visual design overall is a success, and I think the theme works as intended. I tried to rely on more "strong" CSS styling this time (meaning flex and not moving things around via margins), although I did rely on padding here and there ...
+
+## Testing (and sharing with friends!)
+
+I seeded my database with data in order to test the GET route on my server and tested using console logging and by displaying the data on my client. Although I managed to successfully get a queried string (apologies for not knowing how to use the correct language just yet) and could log it in my console, unfortunatley I could not jump the final hurdle and have the queried information displayed on the client (ಥ﹏ಥ) That's ok ... I love getting future goals via tiny failures.
+
+The POST route was tested by myself a LOT and organically tested when I shared the link to my friends (which I obviously did as soon as I could). A LOT of the test entries I personally created got deleted for the simple sake of users not needing to scroll past 24 different "I'm testing" comments left by people named "testtest" or similar.
+
+The testing seems to suggest that I have met the requirements for the MVP (meaning minimum viable product), which brings me to:
+
+## Reflections
+
+☆⌒(> \_ <) I am forcibly telling myself to be more proud of myself for this than I really feel. The dangers of having big dreams, I suppose...
+
+I was kind of shocked at how easy building a working foundation-version of this app was, although I acknowledge that it's (partly) due to the fact that every piece of the puzzle was given to us throughout the week in the workshops, and more .. overtly(?) than usual.
+
+Thinking the logic through for the features I "failed" in was something that I felt fairly comfortable in doing, and I'm .. let's say something like 90% certain that if I had more time (and hadn't foolishly left these features to when there was no class support) I would have managed to get a working version. That is as frustrating as it is heartening, though!
