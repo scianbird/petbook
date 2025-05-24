@@ -40,3 +40,14 @@ app.post("/petbook", function (request, response) {
   );
   const data = response.json(query);
 });
+
+app.get("/petbookvotes", async (request, response) => {
+  const myquery = await db.query(
+    "SELECT favourite_pet, COUNT(favourite_pet) FROM petbook GROUP BY favourite_pet"
+  );
+  response.json(myquery.rows);
+  response.json({ message: myquery });
+});
+
+//IT WORKS .. ٩(｡•́‿•̀｡)۶ .... on 8081/petbookvotes you can see the following: [{"favourite_pet":"Toad","count":"4"},{"favourite_pet":"William","count":"12"},{"favourite_pet":"Jam Sandwich","count":"3"}]
+//I just need to figure out how to bring that to the client .. :thinking:
