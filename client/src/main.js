@@ -25,7 +25,7 @@ function handleSubmit(event) {
 myForm.addEventListener("submit", handleSubmit);
 
 async function newUserComment() {
-  const response = await fetch("https://petbook-zp2k.onrender.com");
+  const response = await fetch("https://petbook-zp2k.onrender.com/petbook");
   const petBook = await response.json();
   console.log(petBook);
   return petBook;
@@ -64,24 +64,26 @@ async function renderData() {
 
 const thumbnailImages = [
   {
-    thumbnail: "public/media/toad_icon.png",
-    image: "public/media/toad_framed.png",
+    thumbnail: "/public/media/toad_icon.png",
+    image: "/public/media/toad_framed.png",
     // commentKeyword: "toad", this was in here so that i could maybe filter in the render function, something like commentKeyword === Favourite pet" and then it would only display those = toad but .. 🤔 I still have a way to go
-    alt: "A cartoon creature.",
+    alt: "Toad, a small pomchi smiles at the camera.",
     class: "navbarImageClass",
     mainFrameclass: "mainFrameclass",
     petname: "It's Toad!",
   },
   {
-    thumbnail: "public/media/william_icon.png",
-    image: "public/media/william_framed.png",
+    thumbnail: "/public/media/william_icon.png",
+    image: "/public/media/william_framed.png",
+    alt: "William, a large tabby cat stares at the camera.",
     class: "navbarImageClass",
     mainFrameclass: "mainFrameclass",
     petname: "It's William!",
   },
   {
-    thumbnail: "public/media/sandwich_icon.png",
-    image: "public/media/sandwich_framed.png",
+    thumbnail: "/public/media/sandwich_icon.png",
+    image: "/public/media/sandwich_framed.png",
+    alt: "Jam Sandwich, a chihuahua puppy, looks at the camera. He is wearing a hat.",
     class: "navbarImageClass",
     mainFrameclass: "mainFrameclass",
     petname: "It's Jam Sandwich!",
