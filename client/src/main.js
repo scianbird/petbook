@@ -9,7 +9,8 @@ function handleSubmit(event) {
 
   const formValues = Object.fromEntries(formData);
 
-  fetch("http://localhost:8081/petbook", {
+  fetch("https://petbook-zp2k.onrender.com", {
+    // I hope this is correct.. the render deploy has been giving me some headaches
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -24,7 +25,7 @@ function handleSubmit(event) {
 myForm.addEventListener("submit", handleSubmit);
 
 async function newUserComment() {
-  const response = await fetch("http://localhost:8081/petbook");
+  const response = await fetch("https://petbook-zp2k.onrender.com");
   const petBook = await response.json();
   console.log(petBook);
   return petBook;
@@ -63,8 +64,8 @@ async function renderData() {
 
 const thumbnailImages = [
   {
-    thumbnail: "src/media/toad_icon.png",
-    image: "src/media/toad_framed.png",
+    thumbnail: "public/media/toad_icon.png",
+    image: "public/media/toad_framed.png",
     // commentKeyword: "toad", this was in here so that i could maybe filter in the render function, something like commentKeyword === Favourite pet" and then it would only display those = toad but .. 🤔 I still have a way to go
     alt: "A cartoon creature.",
     class: "navbarImageClass",
@@ -72,15 +73,15 @@ const thumbnailImages = [
     petname: "It's Toad!",
   },
   {
-    thumbnail: "src/media/william_icon.png",
-    image: "src/media/william_framed.png",
+    thumbnail: "public/media/william_icon.png",
+    image: "public/media/william_framed.png",
     class: "navbarImageClass",
     mainFrameclass: "mainFrameclass",
     petname: "It's William!",
   },
   {
-    thumbnail: "src/media/sandwich_icon.png",
-    image: "src/media/sandwich_framed.png",
+    thumbnail: "public/media/sandwich_icon.png",
+    image: "public/media/sandwich_framed.png",
     class: "navbarImageClass",
     mainFrameclass: "mainFrameclass",
     petname: "It's Jam Sandwich!",
