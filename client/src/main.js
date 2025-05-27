@@ -64,8 +64,8 @@ async function renderData() {
 
 const thumbnailImages = [
   {
-    thumbnail: "/public/media/toad_icon.png",
-    image: "/public/media/toad_framed.png",
+    thumbnail: "toad_icon.png",
+    image: "toad_framed.png",
     // commentKeyword: "toad", this was in here so that i could maybe filter in the render function, something like commentKeyword === Favourite pet" and then it would only display those = toad but .. 🤔 I still have a way to go
     alt: "Toad, a small pomchi smiles at the camera.",
     class: "navbarImageClass",
@@ -73,16 +73,16 @@ const thumbnailImages = [
     petname: "It's Toad!",
   },
   {
-    thumbnail: "/public/media/william_icon.png",
-    image: "/public/media/william_framed.png",
+    thumbnail: "william_icon.png",
+    image: "william_framed.png",
     alt: "William, a large tabby cat stares at the camera.",
     class: "navbarImageClass",
     mainFrameclass: "mainFrameclass",
     petname: "It's William!",
   },
   {
-    thumbnail: "/public/media/sandwich_icon.png",
-    image: "/public/media/sandwich_framed.png",
+    thumbnail: "sandwich_icon.png",
+    image: "sandwich_framed.png",
     alt: "Jam Sandwich, a chihuahua puppy, looks at the camera. He is wearing a hat.",
     class: "navbarImageClass",
     mainFrameclass: "mainFrameclass",
