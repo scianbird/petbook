@@ -27,11 +27,11 @@ app.get("/", function (request, response) {
 
 app.get("/petbook", async function (request, response) {
   const query = await db.query(`SELECT * FROM petbook;`);
-  const data = response.json(query.rows);
+  response.json(query.rows);
 });
 //setting it up with the database I created for the workshop - I will update this later in the process when I am ready to set up the new database (this was just allowing me to visualise data that was already there in the setup stage). if you are reading this, it means it's already updated (and hopefully updated correctly..)
 
-app.post("/petbook", function (request, response) {
+/* app.post("/petbook", function (request, response) {
   const body = request.body;
   console.log(body);
   const query = db.query(
@@ -39,6 +39,15 @@ app.post("/petbook", function (request, response) {
     [body.user_name, body.favourite_pet, body.user_comment]
   );
   const data = response.json(query);
+}); */
+app.post("/petbook", async function (request, response) {
+  const body = request.body;
+  console.log(body);
+  await db.query(
+    `INSERT INTO petbook (user_name, favourite_pet, user_comment) VALUES($1, $2, $3)`,
+    [body.user_name, body.favourite_pet, body.user_comment]
+  );
+  response.status(201).json({ message: "Comment submitted successfully" });
 });
 
 app.get("/petbookvotes", async (request, response) => {
